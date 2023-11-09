@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "27cec589-95ed-499f-8527-fbfd1c2f693f",
+		"name": "kebo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31025807"
+	},
+	"item": [
+		{
+			"name": "kerbocountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kerbos.azurewebsites.net/api/country",
+					"protocol": "https",
+					"host": [
+						"kerbos",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "kerbostate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kerbos.azurewebsites.net/api/state",
+					"protocol": "https",
+					"host": [
+						"kerbos",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SwaggData",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "City",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseU}}/api/Customer?pageSize=10&pageNumber=1",
+					"host": [
+						"{{BaseU}}"
+					],
+					"path": [
+						"api",
+						"Customer"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customerdata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CustomerId\": 200,\r\n    \"Code\": \"huibgy\",\r\n    \"Name\": \"michel\",\r\n    \"Address\": \"dubai\",\r\n    \"CityId\": 1,\r\n    \"City\": \"Chennai\",\r\n    \"StateId\": 1,\r\n    \"State\": \"TamilNadu\",\r\n    \"PinCode\": \"0256524\",\r\n    \"Telephone\": \"080252565\",\r\n    \"MobileNo\": \"1212123212\",\r\n    \"Email\": \"joebidden@gmail.com\",\r\n    \"Active\": 1,\r\n    \"IsDeleted\": 0,\r\n    \"CreatedAt\": \"0001-01-01T00:00:00\",\r\n    \"CreatedBy\": 0,\r\n    \"UpdatedAt\": \"0001-01-01T00:00:00\",\r\n    \"UpdatedBy\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseU}}/api/Customer?Content-Type=application.json",
+					"host": [
+						"{{BaseU}}"
+					],
+					"path": [
+						"api",
+						"Customer"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUpdatedCustomerData",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PutCustomerData",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "7",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 8,\r\n  \"code\": \"hoihsgdgs\",\r\n  \"name\": \"jui\",\r\n  \"address\": \"bgr\",\r\n  \"cityId\": 0,\r\n  \"city\": \"string\",\r\n  \"stateId\": 0,\r\n  \"state\": \"string\",\r\n  \"pinCode\": \"string\",\r\n  \"telephone\": \"string\",\r\n  \"mobileNo\": \"string\",\r\n  \"email\": \"string\",\r\n  \"active\": 0,\r\n  \"isDeleted\": 0,\r\n  \"createdAt\": \"2023-11-08T10:49:30.846Z\",\r\n  \"createdBy\": 0,\r\n  \"updatedAt\": \"2023-11-08T10:49:30.846Z\",\r\n  \"updatedBy\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseU}}/api/Customer",
+					"host": [
+						"{{BaseU}}"
+					],
+					"path": [
+						"api",
+						"Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseU}}/api/Customer/9?id=7",
+					"host": [
+						"{{BaseU}}"
+					],
+					"path": [
+						"api",
+						"Customer",
+						"9"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
